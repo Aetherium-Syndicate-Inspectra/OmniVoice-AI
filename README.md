@@ -7,8 +7,13 @@
 ```text
 omni-voice-ai/
 ├── .github/
+│   ├── dependabot.yml
+│   ├── pull_request_template.md
 │   └── workflows/
-│       └── main.yml
+│       ├── ci.yml
+│       ├── cd.yml
+│       ├── security.yml
+│       └── main.yml  (legacy/manual only)
 ├── src/
 │   ├── config/
 │   ├── controllers/
