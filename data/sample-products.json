@@ -1,0 +1,44 @@
+[
+  {
+    "sku": "SERUM-001",
+    "name": "เซรั่มบำรุงผิว OmniGlow",
+    "price": 790,
+    "currency": "THB",
+    "stock": 52,
+    "description": "เซรั่มบำรุงผิวหน้า เน้นความชุ่มชื้นและผิวกระจ่างใส",
+    "benefits": [
+      "ชุ่มชื้น",
+      "ลดความหมองคล้ำ",
+      "ซึมไว"
+    ],
+    "upsell_suggestion": "คู่กับครีม OmniGlow Night Repair จะช่วยล็อกความชุ่มชื้นได้ดียิ่งขึ้น"
+  },
+  {
+    "sku": "CREAM-002",
+    "name": "ครีม OmniGlow Night Repair",
+    "price": 990,
+    "currency": "THB",
+    "stock": 23,
+    "description": "ครีมบำรุงกลางคืนสำหรับผิวแห้งและต้องการฟื้นฟู",
+    "benefits": [
+      "ฟื้นฟูผิวกลางคืน",
+      "ลดความแห้ง",
+      "ผิวนุ่มขึ้น"
+    ],
+    "upsell_suggestion": "ใช้ร่วมกับเซรั่ม OmniGlow เพื่อผลลัพธ์ที่ครบกว่า"
+  },
+  {
+    "sku": "BUNDLE-003",
+    "name": "เซ็ต OmniGlow Complete",
+    "price": 1690,
+    "currency": "THB",
+    "stock": 10,
+    "description": "ชุดเซรั่มและครีมในราคาพิเศษ",
+    "benefits": [
+      "คุ้มกว่า",
+      "ดูแลง่าย",
+      "เหมาะกับลูกค้าใหม่"
+    ],
+    "upsell_suggestion": "หากต้องการเริ่มต้นแบบครบเซ็ต แนะนำชุดนี้จะคุ้มที่สุด"
+  }
+]

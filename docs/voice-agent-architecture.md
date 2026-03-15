@@ -1,74 +1,29 @@
-# OmniVoice AI Architecture
+# OmniVoice AI — Voice Agent Architecture
 
 ## Overview
 
-OmniVoice AI is a voice automation platform for e-commerce businesses.
+OmniVoice AI is structured in layers:
 
-It enables:
+1. **Telephony layer** — Twilio, Telnyx, SIP bridge
+2. **Speech layer** — STT and optional external TTS
+3. **Conversation layer** — sales engine and prompt shaping
+4. **Business action layer** — product lookup, order status, appointment, handoff
+5. **Delivery layer** — TwiML, Telnyx call control, or SIP bridge response
 
-- automated phone answering
-- AI sales agents
-- order lookup
-- appointment booking
-- 24/7 customer interaction
+## Request lifecycle
 
----
+### Twilio
+Incoming call → Voice webhook → TwiML `<Gather>` → transcript → sales engine → TwiML `<Say>` or `<Play>`
 
-## High-Level Architecture
+### Telnyx
+Voice webhook → answer call → AI gather → structured fields → sales engine → speak command
 
-Customer Call
-        |
-        v
-Telephony Provider
-        |
-        v
-Voice Gateway
-        |
-        v
-Speech-to-Text
-        |
-        v
-Conversation Engine
-        |
-        v
-AI Decision Layer
-        |
-        v
-Business APIs
-(Order / CRM / Booking)
+### SIP bridge
+PBX event → transcript/audio POST → pipeline → JSON response with speak text or audio URL
 
----
+## Replaceable integrations
 
-## Core Components
-
-### Voice Gateway
-
-Handles incoming phone calls and routes audio.
-
-### Speech Recognition
-
-Converts audio to text.
-
-### AI Conversation Engine
-
-Processes user intent and context.
-
-### Business Integration Layer
-
-Connects to:
-
-- e-commerce platforms
-- CRM
-- scheduling systems
-
----
-
-## Deployment Architecture
-
-Production setup typically includes:
-
-- API server
-- voice processing workers
-- Redis queue
-- database
-- monitoring
+- catalog service → Shopify / WooCommerce / custom API
+- order service → OMS / shipping system
+- appointment service → Google Calendar / CRM
+- handoff service → email / Slack / CRM task
