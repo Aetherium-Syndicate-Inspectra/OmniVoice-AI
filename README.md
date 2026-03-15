@@ -157,7 +157,7 @@ erDiagram
 ## Getting Started
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -166,3 +166,15 @@ npm run dev
 ```bash
 docker compose up --build
 ```
+
+
+## Troubleshooting npm install (Node 22 / inotify)
+
+หากเจอ error ตอนติดตั้งที่เกี่ยวกับ `node_modules/inotify` และ `node-gyp rebuild` ให้ล้าง dependency เดิมแล้วติดตั้งใหม่จาก lockfile:
+
+```bash
+rm -rf node_modules
+npm ci
+```
+
+โปรเจกต์นี้ไม่ต้องพึ่ง native module `inotify` โดยตรง ดังนั้นการติดตั้งจาก `package-lock.json` ควรผ่านได้บน Node.js 20+.
