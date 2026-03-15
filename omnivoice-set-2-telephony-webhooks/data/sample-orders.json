@@ -1,0 +1,24 @@
+[
+  {
+    "orderNumber": "ORD1001",
+    "phone": "0811111111",
+    "status": "กำลังจัดส่ง",
+    "trackingNumber": "TH1234567890",
+    "customerName": "คุณเมย์",
+    "items": [
+      "เซรั่มบำรุงผิว OmniGlow"
+    ],
+    "total": 790
+  },
+  {
+    "orderNumber": "ORD1002",
+    "phone": "0822222222",
+    "status": "รอยืนยันการชำระเงิน",
+    "trackingNumber": "",
+    "customerName": "คุณต้น",
+    "items": [
+      "เซ็ต OmniGlow Complete"
+    ],
+    "total": 1690
+  }
+]
