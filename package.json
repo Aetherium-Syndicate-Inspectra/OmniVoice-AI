@@ -25,7 +25,7 @@
     "multer": "^2.0.2",
     "openai": "^6.16.0",
     "telnyx": "^6.26.0",
-    "twilio": "^5.9.0"
+    "twilio": "^5.13.1"
   },
   "devDependencies": {
     "prettier": "^3.6.2"
